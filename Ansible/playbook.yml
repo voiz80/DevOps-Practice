@@ -1,0 +1,25 @@
+- hosts: nodes
+  become: True #become root user
+  tasks:
+  - name: Ensure Python is instaled
+    apt:
+      name: python-simplejson
+      state: present
+      update_cache: yes
+
+  - name: Ensure Docker is installed
+    apt:
+      name: docker.io
+      state: latest
+      update_cache: yes
+      
+  - name: Ensure Docker-compose is installed
+    apt:
+      name: docker-compose
+      state: latest
+      update_cache: yes
+
+  - name: Added user to docker group
+    user:
+      name: vagrant
+      groups: docker
