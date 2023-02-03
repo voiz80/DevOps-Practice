@@ -36,11 +36,7 @@ sudo apt-get install ansible -y
 cd Ansible
 ansible nodes -i myhosts -m command -a hostname
 ```
-6. Install Python on all nodes
-```
-####ansible nodes -i myhosts -m command -a 'sudo apt-get -y install python-simplejson'
-```
-7. Run the playbook to install Python and Docker
+6. Run the playbook to install Python and Docker
 ```
 ansible-playbook -i myhosts -K playbook.yml
 ```
