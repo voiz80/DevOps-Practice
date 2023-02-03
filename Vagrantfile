@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
         }
       ]
 
-    servers.each do |machine|
+      servers.each do |machine|
         config.vm.define machine[:hostname] do |node|
             node.vm.box = machine[:box]
             node.vm.hostname = machine[:hostname]
@@ -35,7 +35,6 @@ Vagrant.configure("2") do |config|
             node.vm.provider :virtualbox do |vb|
                 vb.customize ["modifyvm", :id, "--memory", 512]
                 vb.customize ["modifyvm", :id, "--cpus", 1]
-            sudo cp hosts /et hosts
             end
         end
     end

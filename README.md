@@ -3,14 +3,18 @@ DevOps Practice with Vagrant, Ansible, Docker and Container Orchestration
 
 In this Project introduce the concept of configuration as code with Vagrant and VirtualBox, go over configuration management with Ansible, then Containers and Container Orchestration with Docker and Docker Swarm.
 
-Important: Must build image for vagrant box - Ubuntu 22.04
 # Vagrant Cheatsheet
 https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4
+
+# Install Vagrant
+https://www.vagrantup.com/docs/installation
 
 # Usage
 1. Up with Vagrant
 ```
 vagrant up
+vagrant ssh
+sudo cp hosts /etc/hosts
 ```
 2. We check if everything is OK
 ```
