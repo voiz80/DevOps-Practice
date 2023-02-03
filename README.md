@@ -13,12 +13,14 @@ https://www.vagrantup.com/docs/installation
 1. Up with Vagrant
 ```
 vagrant up
-vagrant ssh
+vagrant ssh control
+cd /vagrant
 sudo cp hosts /etc/hosts
 ```
 2. We check if everything is OK
 ```
 ssh vagrant@node1
+exit
 ```
 3. Make hosts SSH accessible /on the control station/
 ```
@@ -31,14 +33,14 @@ sudo apt-get install ansible -y
 ```
 5. Test ansible
 ```
-cd Ansible/
+cd Ansible
 ansible nodes -i myhosts -m command -a hostname
 ```
 6. Install Python on all nodes
 ```
 ####ansible nodes -i myhosts -m command -a 'sudo apt-get -y install python-simplejson'
 ```
-7. Run the playbook to install docker
+7. Run the playbook to install Python and Docker
 ```
 ansible-playbook -i myhosts -K playbook.yml
 ```
