@@ -40,3 +40,22 @@ ansible nodes -i myhosts -m command -a hostname
 ```
 ansible-playbook -i myhosts -K playbook.yml
 ```
+7. Test docker-compose app
+```
+ssh vagrant@node1
+cd /vagrant/Docker
+docker-compose up -d
+```
+And then from "control" instance:
+```
+curl node1:5000
+```
+# Troubleshooting
+Sometimes if you made a mistake, you made have to re-do the image build with docker-compose build
+```
+docker-compose build
+```
+
+
+
+
