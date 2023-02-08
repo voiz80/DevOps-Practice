@@ -4,7 +4,7 @@ DevOps Practice with Vagrant, Ansible, Docker and Container Orchestration
 In this Project introduce the concept of configuration as code with Vagrant and VirtualBox, go over configuration management with Ansible, then Containers and Container Orchestration with Docker and Docker Swarm.
 
 # Vagrant Cheatsheet
-https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4
+https://gist.github.com/voiz80/48bc7edad27d68ac28c148285666a013
 
 # Install Vagrant
 https://www.vagrantup.com/docs/installation
